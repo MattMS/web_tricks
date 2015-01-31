@@ -1,7 +1,4 @@
-doctype html
-html(lang="en")
-	head
-		meta(charset="utf-8")
-		title Web tricks
-	body
-		include:markdown ./README.md
+extends _base.jade
+
+block content
+	include:markdown README.md
