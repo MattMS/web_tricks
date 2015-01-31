@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="author", content="Matt McKellar-Spence")
+		meta(name="description", content="Example code with different libraries")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+		title
+			block title
+				| Web tricks
+
+		block css
+			include ./_css.jade
+	body
+		article.container
+			block content
+		footer.container
+			hr
+			ul
+				li: a(href="/") Home
+				li: a(href="http://about.mattms.info") Read about me
+				li: a(href="https://github.com/MattMS/web_tricks") View on GitHub
