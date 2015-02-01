@@ -1,8 +1,8 @@
-doctype html
-html(lang="en")
-	head
-		meta(charset="utf-8")
-		title Page loaded
-		script(type="text/javascript")
-			include ./index.js
-	body
+extends ../_base
+
+block title
+	| Page loaded
+
+block scripts
+	script(type="text/javascript")
+		include ./index.js
