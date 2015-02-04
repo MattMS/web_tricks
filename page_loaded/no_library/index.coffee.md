@@ -1,4 +1,4 @@
-# Show alert when page has loaded
+# Page loaded
 
 	ready = ->
 		alert 'Page loaded'

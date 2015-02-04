@@ -1,8 +1,14 @@
 extends ../_base
 
+
 block title
 	| Page loaded
+
 
 block scripts
 	script(type="text/javascript")
 		include ./index.js
+
+
+block content
+	include:markdown index.coffee.md

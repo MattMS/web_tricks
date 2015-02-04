@@ -30,7 +30,21 @@ if (document.addEventListener) {
     <link href="http://css.mattms.info/solarized/dark/index.css?t=2014-12-21T1300+10" rel="alternate stylesheet" title="Solarized dark" type="text/css">
   </head>
   <body>
-    <article class="container">
+    <article class="container"><h1 id="page-loaded">Page loaded</h1>
+<pre><code>ready = -&gt;
+    alert &#39;Page loaded&#39;
+</code></pre><p>For most browsers:</p>
+<pre><code>if document.addEventListener
+    document.addEventListener &#39;DOMContentLoaded&#39;, (event)-&gt;
+        ready()
+    , false
+</code></pre><p>And for Internet Explorer:</p>
+<pre><code>else if document.attachEvent
+    document.attachEvent &#39;onreadystatechange&#39;, -&gt;
+        if &#39;complete&#39; == document.readyState
+            ready()
+</code></pre><p>Taken from: <a href="http://stackoverflow.com/questions/799981/document-ready-equivalent-without-jquery">http://stackoverflow.com/questions/799981/document-ready-equivalent-without-jquery</a></p>
+
     </article>
     <footer class="container">
       <hr>
