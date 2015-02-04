@@ -8,5 +8,13 @@ aim.
 While TodoMVC shows you how a whole application can be built with
 different libraries, this only shows how smaller tasks are achieved.
 
+
+## Demo
+
+- [Alert when the page has loaded](./page_loaded/)
+
+
+## Tips
+
 Anything that is prefixed with `my_` can be changed to whatever you
 like, as long as it matches up with other places that variable is used.
