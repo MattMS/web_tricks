@@ -10,10 +10,13 @@ html(lang="en")
 			block title
 				| Web tricks
 
-		block scripts
+		mixin jquery
+			script(src="/components/jquery/2/1/3/min.js", type="text/javascript")
 
 		include ./_css.jade
 		block styles
+
+		block scripts
 	body
 		article.container
 			block content
