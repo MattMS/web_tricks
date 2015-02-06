@@ -18,6 +18,8 @@ used.
 
 - [Alert when the page has loaded](./page_loaded/)
 
+- [Save value in browser](./browser_storage/)
+
 
 ## Tips
 

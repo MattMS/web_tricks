@@ -1,0 +1,20 @@
+extends ../_base
+
+
+block title
+	| Save object in browser
+
+
+block scripts
+	+jquery
+	+pouchdb
+
+	script(type="text/javascript")
+		include ./index.js
+
+
+block content
+	include:markdown index.coffee.md
+
+	textarea#my_input
+	button#my_button Save
