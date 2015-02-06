@@ -16,11 +16,10 @@
   db = new PouchDB('my_db');
   my_doc_id = 'my_text';
   db.get(my_doc_id, function(err, doc) {
-    var value;
     if (err) {
       return console.error(err);
     } else {
-      return value = $('#my_input').val(doc.my_value);
+      return $('#my_input').val(doc.my_value);
     }
   });
   return $('#my_button').click(function(e) {
@@ -43,23 +42,26 @@
   </head>
   <body>
     <article class="container"><h1 id="save-object-in-browser-with-pouchdb">Save object in browser with PouchDB</h1>
+<p>jQuery makes it simpler to grab the page ready event and select items.</p>
 <pre><code>$ -&gt;
-    db = new PouchDB &#39;my_db&#39;
-
-    my_doc_id = &#39;my_text&#39;
-
-
-    db.get my_doc_id
+</code></pre><p>Creating a new PouchDB object with the same name will load it from the
+browser storage.</p>
+<pre><code>    db = new PouchDB &#39;my_db&#39;
+</code></pre><p>The document ID has to be unique in the database.</p>
+<pre><code>    my_doc_id = &#39;my_text&#39;
+</code></pre><p><code>db.get</code> requests the document with the given ID.</p>
+<pre><code>    db.get my_doc_id
     , (err, doc)-&gt;
-        if err
+</code></pre><p>This will receive a 404 error before you save a value because a document
+with matching ID does not exist yet.</p>
+<pre><code>        if err
             console.error err
 
         else
-            value = $ &#39;#my_input&#39;
+            $ &#39;#my_input&#39;
             .val doc.my_value
-
-
-    $ &#39;#my_button&#39;
+</code></pre><p>Add a listener to the button to save the value when clicked.</p>
+<pre><code>    $ &#39;#my_button&#39;
     .click (e)-&gt;
         e.preventDefault()
 
@@ -69,8 +71,9 @@
         doc =
             _id: my_doc_id
             my_value: value
-
-        db.put doc
+</code></pre><p><code>db.put</code> saves the document, replacing the current document with the
+matching ID.</p>
+<pre><code>        db.put doc
 
         .catch (err)-&gt;
             console.error err
@@ -78,6 +81,7 @@
         .then (doc)-&gt;
             console.log &#39;JSON doc saved!&#39;
 </code></pre>
+      <h2>Demo controls</h2>
       <textarea id="my_input"></textarea>
       <button id="my_button">Save</button>
     </article>

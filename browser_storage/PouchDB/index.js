@@ -3,11 +3,10 @@ $(function() {
   db = new PouchDB('my_db');
   my_doc_id = 'my_text';
   db.get(my_doc_id, function(err, doc) {
-    var value;
     if (err) {
       return console.error(err);
     } else {
-      return value = $('#my_input').val(doc.my_value);
+      return $('#my_input').val(doc.my_value);
     }
   });
   return $('#my_button').click(function(e) {
