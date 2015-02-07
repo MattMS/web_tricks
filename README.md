@@ -18,7 +18,7 @@ used.
 
 - [Alert when the page has loaded](./page_loaded/)
 
-- [Save a value in the browser](./browser_storage/)
+- [Save a value in the browser](./storage/browser/)
 
 
 ## Tips
