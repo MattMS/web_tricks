@@ -8,8 +8,8 @@ aim.
 While TodoMVC shows you how a whole application can be built with
 different libraries, this only shows how smaller tasks are achieved.
 
-The demos are written in [CoffeeScript](http://coffeescript.org/) but I
-have included the compiled Javascript files with them.
+The demos are written in [CoffeeScript](http://coffeescript.org/) but
+include the compiled Javascript files in the same folder.
 You can view source on any demo page to view all the HTML and Javascript
 used.
 
@@ -18,7 +18,7 @@ used.
 
 - [Alert when the page has loaded](./page_loaded/)
 
-- [Save value in browser](./browser_storage/)
+- [Save a value in the browser](./browser_storage/)
 
 
 ## Tips
