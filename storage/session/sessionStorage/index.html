@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Matt McKellar-Spence">
+    <meta name="description" content="Example code with different libraries">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save value for session</title>
+    <link href="http://css.mattms.info/basic/light/index.css?t=2014-12-21T1300+10" rel="stylesheet" title="Basic light" type="text/css">
+    <link href="http://css.mattms.info/basic/dark/index.css?t=2014-12-21T1300+10" rel="alternate stylesheet" title="Basic dark" type="text/css">
+    <link href="http://css.mattms.info/solarized/dark/index.css?t=2014-12-21T1300+10" rel="alternate stylesheet" title="Solarized dark" type="text/css">
+        <script src="/components/jquery/2/1/3/min.js" type="text/javascript"></script>
+    <script type="text/javascript">$(function() {
+  var my_value, my_value_id;
+  my_value_id = 'my_text';
+  my_value = sessionStorage.getItem(my_value_id);
+  $('#my_input').val(my_value);
+  return $('#my_button').click(function(e) {
+    e.preventDefault();
+    my_value = $('#my_input').val();
+    return sessionStorage.setItem(my_value_id, my_value);
+  });
+});
+
+    </script>
+  </head>
+  <body>
+    <article class="container"><h1 id="save-value-for-session">Save value for session</h1>
+<p>The value is only saved until you close your browser.</p>
+<p>jQuery makes it simpler to grab the page ready event and select items.</p>
+<pre><code>$ -&gt;
+    my_value_id = &#39;my_text&#39;
+
+    my_value = sessionStorage.getItem my_value_id
+
+    $ &#39;#my_input&#39;
+    .val my_value
+</code></pre><p>Add a listener to the button to save the value when clicked.</p>
+<pre><code>    $ &#39;#my_button&#39;
+    .click (e)-&gt;
+        e.preventDefault()
+
+        my_value = $ &#39;#my_input&#39;
+        .val()
+
+        sessionStorage.setItem my_value_id, my_value
+</code></pre><h2 id="useful-links">Useful links</h2>
+<ul>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.sessionStorage">sessionStorage on MDN</a></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">Storage on MDN</a></p>
+</li>
+</ul>
+
+      <h2>Demo controls</h2>
+      <textarea id="my_input"></textarea>
+      <button id="my_button">Save</button>
+    </article>
+    <footer class="container">
+      <hr>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="http://about.mattms.info">Read about me</a></li>
+        <li><a href="https://github.com/MattMS/web_tricks">View on GitHub</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

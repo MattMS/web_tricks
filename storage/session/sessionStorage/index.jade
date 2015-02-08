@@ -1,0 +1,21 @@
+extends ../_base
+
+
+block title
+	| Save value for session
+
+
+block scripts
+	+jquery
+
+	script(type="text/javascript")
+		include ./index.js
+
+
+block content
+	include:markdown index.coffee.md
+
+	h2 Demo controls
+
+	textarea#my_input
+	button#my_button Save

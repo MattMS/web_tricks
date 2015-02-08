@@ -16,9 +16,12 @@ used.
 
 ## Demo
 
-- [Alert when the page has loaded](./page_loaded/)
+- [Alert when the page has loaded](./page_loaded/).
 
-- [Save a value in the browser](./storage/browser/)
+- Save a value
+  [for one session](./storage/session/)
+  or for longer
+  [in the browser](./storage/browser/).
 
 
 ## Tips
