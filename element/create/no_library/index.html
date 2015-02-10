@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Matt McKellar-Spence">
+    <meta name="description" content="Example code with different libraries">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create element</title>
+    <link href="http://css.mattms.info/basic/light/index.css?t=2014-12-21T1300+10" rel="stylesheet" title="Basic light" type="text/css">
+    <link href="http://css.mattms.info/basic/dark/index.css?t=2014-12-21T1300+10" rel="alternate stylesheet" title="Basic dark" type="text/css">
+    <link href="http://css.mattms.info/solarized/dark/index.css?t=2014-12-21T1300+10" rel="alternate stylesheet" title="Solarized dark" type="text/css">
+    <script type="text/javascript">var ready;
+
+ready = function() {
+  var my_li, my_ul;
+  my_li = document.createElement('li');
+  my_li.innerHTML = 'Shiny, new li tag!';
+  my_ul = document.getElementById('my_ul');
+  return my_ul.appendChild(my_li);
+};
+
+document.addEventListener('DOMContentLoaded', ready, false);
+
+    </script>
+  </head>
+  <body>
+    <article class="container"><h1 id="create-element">Create element</h1>
+<p>This requires a <code>ul#my_ul</code> tag on the page.</p>
+<pre><code>ready = -&gt;
+    my_li = document.createElement &#39;li&#39;
+    my_li.innerHTML = &#39;Shiny, new li tag!&#39;
+
+    my_ul = document.getElementById &#39;my_ul&#39;
+    my_ul.appendChild my_li
+
+
+document.addEventListener &#39;DOMContentLoaded&#39;, ready, false
+</code></pre>
+      <h2>Demo area</h2>
+      <ul id="my_ul">
+        <li>Existing li tag</li>
+      </ul>
+    </article>
+    <footer class="container">
+      <hr>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="http://about.mattms.info">Read about me</a></li>
+        <li><a href="https://github.com/MattMS/web_tricks">View on GitHub</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

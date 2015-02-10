@@ -1,0 +1,19 @@
+extends ../_base
+
+
+block title
+	| Create element
+
+
+block scripts
+	script(type="text/javascript")
+		include ./index.js
+
+
+block content
+	include:markdown index.coffee.md
+
+	h2 Demo area
+
+	ul#my_ul
+		li Existing li tag
